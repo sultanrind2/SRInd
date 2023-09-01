@@ -31,7 +31,8 @@ jobs:
 
     - name: Create Tunnel
       run: |
-        while true; do
+        while ($true) {
           .\ngrok\ngrok.exe tcp 3389
-          sleep 1800  # Sleep for 30 minutes before restarting the tunnel
-        done
+          Start-Sleep -Seconds 1800  # Sleep for 30 minutes before restarting the tunnel
+        }
+
